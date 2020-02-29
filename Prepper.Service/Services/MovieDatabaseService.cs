@@ -3,12 +3,12 @@ using System;
 using System.Collections.Generic;
 using System.Net;
 using System.Net.Http;
-using System.Text.Json;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace Prepper.Service.Services
 {
-    public class MovieDatabaseService
+    public class MovieDatabaseService : IMovieDatabaseService
     {
         private readonly HttpClient _httpClient;
         private const string ApiKey = "923a557cb64c9fb40825e0fcdccad9ab";
@@ -43,7 +43,7 @@ namespace Prepper.Service.Services
             response.EnsureSuccessStatusCode();
 
             var responseBody = await response.Content.ReadAsStringAsync();
-            var movieDatabaseResponse = JsonSerializer.Deserialize<MovieDatabaseResponse>(responseBody);
+            var movieDatabaseResponse = JsonConvert.DeserializeObject<MovieDatabaseResponse>(responseBody);
             var movieDatabaseResults = movieDatabaseResponse.Results;
             
             return movieDatabaseResults;

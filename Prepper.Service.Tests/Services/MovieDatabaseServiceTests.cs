@@ -1,9 +1,9 @@
+using System.Threading.Tasks;
 using FluentAssertions;
 using Prepper.Service.Services;
-using System.Threading.Tasks;
 using Xunit;
 
-namespace Prepper.Service.UnitTests
+namespace Prepper.Service.Tests.Services
 {
     public class MovieDatabaseServiceTests
     {
@@ -14,7 +14,7 @@ namespace Prepper.Service.UnitTests
             var movieDatabaseService = new MovieDatabaseService();
 
             // Act
-            var results = await movieDatabaseService.MovieSearchAsync("Avengers");
+            var results = await movieDatabaseService.MovieSearchAsync("Avengers").ConfigureAwait(true);
 
             // Assert
             results.Should().NotBeEmpty();

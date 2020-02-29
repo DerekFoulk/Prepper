@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29728.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prepper.Service", "Prepper.Service\Prepper.Service.csproj", "{8B0A7008-DDC6-4DC1-9B2D-8CB20767C998}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prepper.Service.UnitTests", "Prepper.Service.UnitTests\Prepper.Service.UnitTests.csproj", "{1AB31A0E-FEF8-4143-A12C-B9BF14529E3B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prepper.Service.Tests", "Prepper.Service.Tests\Prepper.Service.Tests.csproj", "{1AB31A0E-FEF8-4143-A12C-B9BF14529E3B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
