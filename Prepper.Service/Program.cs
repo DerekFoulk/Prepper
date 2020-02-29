@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Prepper.Service.Services;
 
 namespace Prepper.Service
 {
@@ -19,6 +20,7 @@ namespace Prepper.Service
                 .ConfigureServices((hostContext, services) =>
                 {
                     services.AddHostedService<Worker>();
+                    services.AddHttpClient<MovieDatabaseService>();
                 });
     }
 }
